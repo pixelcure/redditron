@@ -19,12 +19,13 @@ export class Item extends Component {
 		this.state = {
 			favToDelete : null,
 			messageBoxVisible : false
-		}
+		};
 
 		// Bind - handleFavRemove()
 		this.handleFavRemove = this.handleFavRemove.bind(this);
 		// Bind - closeMessageBox()
 		this.closeMessageBox = this.closeMessageBox.bind(this);
+
 	};
 
 	// Handle fav remove and confirmation
@@ -60,6 +61,7 @@ export class Item extends Component {
 
 	};
 
+	// Close message box on delete confirmation
 	closeMessageBox(e){
 
 		// Set state, toggle nsfw
@@ -109,7 +111,7 @@ export class Item extends Component {
 					source={this.props.souce}
 					viewSourceFrame={this.props.viewSourceFrame}
 					addFavorite={this.props.addFavorite}
-					removeFavorite={this.props.removeFavorite}
+					favorites={this.props.favorites}
 					ups={this.props.ups}
 					downs={this.props.downs}
 					view={this.props.view}

@@ -114,7 +114,7 @@ export class Feed extends Component {
 		const renderLoader = () => {
 			return (
 				<Loading />
-			)
+			);
 		};
 
 		return (

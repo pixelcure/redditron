@@ -305,6 +305,7 @@ export class Root extends Component {
 				<Feed 
 					cssOuterClass={`feed`}
 					feed={this.state.feed}
+					favorites={this.state.favorites}
 					addFavorite={this.addFavorite}
 					refreshFeed={this.refreshFeed}
 					viewSourceFrame={this.viewSourceFrame}

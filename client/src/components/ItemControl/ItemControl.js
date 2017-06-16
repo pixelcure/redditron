@@ -17,37 +17,46 @@ export class ItemControl extends Component {
 
 	render() {
 
-		// Render favorite button
-		const renderFavControl = () => {
+		// Render add favorite button
+		const renderFavButton = () => {
+			return(
+				<li className="list__clean item-control__control">
+					<Button
+						text={`Add to Favorites`}
+						noText={true}
+						iconClass={`icon-heart`}
+						id={this.props.id}
+						cssClass={`button--heart`}
+						callBack={this.props.addFavorite}
+					/>
+				</li>
+			);
+		};
 
-			// only render "fav" button on root, not favs
-			if(this.props.view === 'root'){
-				return(
-					<li className="list__clean">
-						<Button
-							text={`Add to Favorites`}
-							noText={true}
-							iconClass={`icon-heart`}
-							id={this.props.id}
-							cssClass={`button--heart`}
-							callBack={this.props.addFavorite}
-						/>
-					</li>
-				);
-			} else {
-				return(
-					<li className="list__clean item-control__control" data-item-id={this.props.id}>
-						<Button 
-							text={`delete`}
-							noText={true}
-							iconClass={`icon-bin`}
-							id={this.props.id}
-							cssClass={`button--bin`}
-							callBack={this.props.handleFavRemove}
-						/>
-					</li>
-				);
-			}
+		// Render delete fav button
+		const renderTrashButton = () => {
+			return(
+				<li className="list__clean item-control__control" data-item-id={this.props.id}>
+					<Button 
+						text={`Delete from Favorites`}
+						noText={true}
+						iconClass={`icon-bin`}
+						id={this.props.id}
+						cssClass={`button--bin`}
+						callBack={this.props.handleFavRemove}
+					/>
+				</li>
+			);
+		};
+
+		// Render favorite button
+		const handleFavOrDelete = () => {
+
+			// See if we have this in our favorites, if we do, render an option to delete it
+			const findFav = this.props.favorites.find((fav) => fav.data.id === this.props.id ? true : false);
+				
+			// If it found an array, render trash button, otherwise add fav button
+			findFav !== undefined ? renderTrashButton() : renderFavButton();
 
 		};
 
@@ -77,7 +86,7 @@ export class ItemControl extends Component {
 							iconClass={`icon-share`}
 						/>
 					</li>
-					{ renderFavControl() }
+					{ this.props.view === 'root' ? handleFavOrDelete() : renderTrashButton() }
 				</ul>
 
 				<ul className="table__cell popularity list">					
