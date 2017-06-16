@@ -1,6 +1,6 @@
 ## Redditron
 
-#This app is in development
+This app is in development
 
 
 
@@ -10,7 +10,12 @@ This is just a web app excersie for pulling reddit images/text from randomized r
 
 # To begin, you'll need to be sure to have Node and Electron installed globally.
 
-# The root folder contains the `main.js` file to handle Electron, as well as it's `package.json` file to handle dependencies. Begin buy running `npm install` in root folder within your terminal. Next, change directors to `/client` and `npm install` there as well for the front end dependencies.
+#### Please be aware, there are two `package.json` files. One handles back end Electron side, in the projects `root`. The other is located on the client side, within `/client`.
+
+The root folder contains the `main.js` file to handle Electron, as well as it's `package.json` file to handle dependencies. 
+
+
+Begin by running `npm install` in root folder within your terminal. Next, change directors to `/client` and `npm install` there as well for the front end dependencies.
 
 
 After you've installed the dependncies, you'll need to run both Electron and the server for the client.
