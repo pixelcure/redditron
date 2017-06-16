@@ -1,0 +1,33 @@
+  //////////////////////////////////////
+ // NOT FOUND /////////////////////////
+//////////////////////////////////////
+
+
+
+.not-found {
+	.table__table--not-found {
+		text-align: center;
+		h1 {
+			display: block;
+			font-size: 10vw;
+			margin-bottom: 10%;
+			position: relative;
+			&:before {
+				content: 'Well...';
+				font-size: 3vw;
+				position: absolute;
+				padding-left: 1vw;
+				transform: translateY(-8vw);
+			}
+		}
+		h2 {
+			color: $black;
+			font-size: 3vw;
+			margin-bottom: 3%;
+		}
+		a {
+			color: $red;
+			font-size: 3vw;
+		}
+	}
+} // end not found

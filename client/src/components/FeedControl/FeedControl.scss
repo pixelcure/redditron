@@ -1,0 +1,106 @@
+  /////////////////////////////////////////////////
+ // FEED CONTROL /////////////////////////////////
+/////////////////////////////////////////////////
+
+
+
+// COLORS
+$white : #ECF0F1;
+$slate : #2C3E50;
+$red : #E74C3C;
+$medical : #22bdaf;
+$green : #00554c;
+$black : #000;
+
+.feed-control {
+    background: #FFF;
+    display: table;
+    list-style: none;
+    padding: 1.2% 1% 1% 1%;
+    width: 100%;
+
+    &__tabsToggle {
+        float: left;
+        form {
+            display: table;
+            width: 100%;
+            fieldset {
+                display: table;
+                float: left;
+                padding-left: 50px;
+                label {    
+                    font-size: 1vmax;
+                    font-weight: 100;
+                    padding-top: 2px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__boardToggle {
+        cursor: pointer;
+        float: right;
+
+        .boardToggle__title {
+            float: left;
+            padding-top: 2px;
+            
+            span {
+                color: #E74C3C;
+            }
+
+            &:before {
+                background: $red;
+                content: 'Click Here to Search!';
+                color: $white;
+                display: none;
+                font-size: 1vmax;
+                position: absolute;
+                width: 100%;
+            }
+    
+            &:hover {
+                &:before {
+                    display: block;
+                }
+            }
+
+        }
+
+        .boardToggle__refresh {
+            float: right;
+            padding-left: 20px;
+        }
+
+    }
+
+    &__searchBoard {
+        float: right;
+        margin-right: 3%;
+        height: 30px;
+
+        .searchBoard__search {
+            margin-right: 1%;
+            overflow: hidden;
+            width: 150px;
+
+            input {
+                border: 1px solid red;
+                color: #000;
+                float: left;
+                outline: none;
+                padding: 5%;
+                font-size: 1vmax;
+            }
+            .search__cancel {
+                cursor: pointer;
+                color: $red;
+                float: right;
+                position: relative;
+                right: 0px;
+            }
+        }
+    }
+
+} // end feed-control

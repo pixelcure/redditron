@@ -1,0 +1,35 @@
+  /////////////////////////////////////////
+ // LOADING //////////////////////////////
+/////////////////////////////////////////
+
+
+
+// rotate
+@keyframes loading {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.loader {
+    background: transparent;
+    left: 0
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+	
+	&__spinner {
+	    -webkit-animation: loading 1.2s infinite linear;
+	    -moz-animation: loading 1.2s infinite linear;
+	    -ms-animation: loading 1.2s infinite linear;
+	    animation: loading 1.2s infinite linear;
+	    height: 40px;
+	    border-radius: 50%;
+	    border-top: 4px solid lighten(#000, 50);
+	    border-right: 4px solid lighten(#000, 50);
+	    border-bottom: 4px solid #E74C3C;
+	    border-left: 4px solid #E74C3C;
+	    margin: 50%;
+	    width: 40px;
+	}
+
+} // end loader

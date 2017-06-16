@@ -1,0 +1,48 @@
+  ////////////////////////////////
+ // TYPOGRAPHY //////////////////
+////////////////////////////////
+
+
+
+// Import Typefaces
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700,700i,800,800i,900,900i');
+
+// Main Typefaces being used
+$roboto : 'Roboto', sans-serif;
+$raleway : 'Raleway', sans-serif;
+
+// Italic Text
+em {
+	font-style: italic;
+}
+
+// Bolded Text
+strong {
+	font-weight: bold;
+}
+
+// Links
+a {
+	color: $red;
+	text-decoration: none;
+}
+
+// Base type
+h1, h2, h3, h4, h5 {
+  color: $red;
+  font-family: $raleway;
+  margin: 0;
+}
+
+// h1
+h1 {
+}
+
+p {
+  color: $medical;
+  font-family: $roboto;
+  font-weight: 100;
+  font-size: 16px;
+  font-size: 1vmax;
+}

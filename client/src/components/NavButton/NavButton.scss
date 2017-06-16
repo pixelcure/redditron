@@ -1,0 +1,86 @@
+  //////////////////////////////////////
+ // NAV BUTTON ////////////////////////
+//////////////////////////////////////
+
+
+
+// COLORS
+$white : #ECF0F1;
+$slate : #2C3E50;
+$red : #E74C3C;
+$medical : #22bdaf;
+$green : #00554c;
+$black : #000;
+
+@keyframes widen {
+  from {
+  	width: 5px;
+  }
+  to {
+  	width: 35px; 
+  }
+}
+
+@keyframes slideInClose {
+  from {
+  	opacity: 0;
+  	transform: translateX(-100%);
+  }
+  to {
+  	opacity: 1;
+  	transform: translateX(0%);
+  }
+}
+
+.nav-button {
+	cursor: pointer;
+	position: fixed;
+	top: 25px;
+	left: 15%;
+	text-align: center;
+	height: 15px;
+	width: 35px;
+	z-index: 5;
+	
+	&.close-nav {
+		animation-fill-mode: forwards;
+		animation-name: slideInClose;
+		animation-duration: .3s;
+		animation-timing-function: cubic-bezier(0, 1.24, 1, 1);
+		animation-delay: 300ms;
+		background: $white;
+		font-size: 40px;
+		left: 15px;
+		opacity: 0;
+		padding-top: 2px;
+	}
+
+	@for $i from 1 through 3 {
+		li.line:nth-child(#{$i}) {
+			animation-delay: #{$i/10+'s'};
+			animation-duration: #{$i/3+'s'};
+		}
+	}
+
+	li.line {
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(0, 1.24, 1, 1);
+		animation-name: widen;
+		border: 1px solid lighten($black, 50);
+		height: 0px;
+	    margin-bottom: 5px;
+	    perspective-origin: left;
+	    width: 35px;
+	}
+
+	&:hover {
+		li.line {
+			animation-name: widen;
+		}
+	}
+
+	&.active {
+		li.line { border-color: $slate; }
+	}
+
+} // End Nav Button

@@ -1,0 +1,62 @@
+  /////////////////////////////////////////////
+ // Message Box //////////////////////////////
+/////////////////////////////////////////////
+
+
+
+// COLORS
+$white : #ECF0F1;
+$slate : #2C3E50;
+$red : #E74C3C;
+$medical : #22bdaf;
+$green : #00554c;
+$black : #000;
+
+.messageBox {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+
+    &__inner {
+        background: #FFF;
+        border-bottom: 1px solid $red;
+        box-shadow: inset -1px -3px 10px rgba(0, 0, 0, .5);
+        .inner__text {
+            color: $black;
+            font-size: 2vmax;
+            margin: 0;
+            padding: 2.5% 5%;
+            button {
+                border: 1px solid red;
+                font-size: 2vmax;
+                margin-left: 2%;
+                padding: 0 .5%;
+                text-transform: uppercase;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+        .inner__close {
+            color: $red;
+            cursor: pointer;
+            font-size: 2vmax;
+            padding: 0.6% 5% 0 0;
+            span {
+                color: rgba(0, 0, 0, .7);
+                font-size: 1.5vmax;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__mask {
+        background: rgba(231, 76, 60, .8);
+        height: 100%;
+        width: 100%;
+    }
+
+} // End Message Box

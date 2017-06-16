@@ -1,0 +1,92 @@
+  //////////////////////////////////////
+ // NAVIGATION ////////////////////////
+//////////////////////////////////////
+
+
+
+// COLORS
+$white : #ECF0F1;
+$slate : #2C3E50;
+$red : #E74C3C;
+$medical : #22bdaf;
+$green : #00554c;
+$black : #000;
+
+@keyframes appear {
+  from { 
+  	background: $white;
+  	opacity: 0;
+  	transform: scaleX(0.7) translateY(100%);
+  }
+  to {
+  	background: transparent;
+	opacity: 1;
+  	transform: scaleX(1) translateY(0%);  
+  }
+}
+
+nav {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+
+		@for $i from 1 through 25 {
+			li:nth-child(#{$i}) {
+				animation-delay: #{$i/5.0+'s'};
+				animation-duration: #{$i/5+'s'};
+			}
+		}
+	
+		li {
+			animation-name: appear;
+			animation-fill-mode: forwards;
+			animation-timing-function: cubic-bezier(0, 1.24, 1, 1);
+			opacity: 0;
+			perspective: 500px;
+			width: 100%;
+
+			a {
+				color: $white;
+				display: block;
+				font-weight: bold;
+				padding: 1vw;
+				position: relative;
+				text-align: center;
+				text-transform: uppercase;
+				
+				span {
+					position: relative;
+					z-index: 2;
+					&.fav-count {
+						padding-left: 1px;
+						position: relative;
+						top: 2px;
+					}
+				}
+
+				&:after {
+					content: '';
+					height: 100%;
+					left: 0;
+					position: absolute;
+					perspective-origin: left;
+					top: 0;
+					transition: .3s ease-in;
+					width: 0%;
+				}
+
+				&:hover {
+					color: $white;
+					&:after {
+						background: lighten($red, 5);
+						width: 100%;
+					}
+				}
+			}
+		} // End Nav Item
+
+	} // End end list container
+
+} // End Nav

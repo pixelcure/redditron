@@ -1,0 +1,106 @@
+  ////////////////////////////////////////
+ // BUTTON //////////////////////////////
+////////////////////////////////////////
+
+
+
+// COLORS
+$white : #ECF0F1;
+$slate : #2C3E50;
+$red : #E74C3C;
+$medical : #22bdaf;
+$green : #00554c;
+$black : #000;
+
+.button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.6vmax;
+    outline: 0;
+    padding: 0;
+
+    &:hover, &--selected {
+        background: #E74C3C;
+        color: #FFF;
+    }
+    
+    &--heart {
+        &:after {
+            content: 'make a favorite';
+            color: $black;
+            display: none;
+            font-size: .8vmax;
+            padding-top: 12px;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: transparent;
+            color: initial;
+
+            &:after {
+                display: inline;
+            }
+        }
+    }
+
+    &--source {
+        &:after {
+            content: 'view source';
+            color: $black;
+            display: none;
+            font-size: .8vmax;
+            padding-top: 12px;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: transparent;
+            color: initial;
+
+            &:after {
+                display: inline;
+            }
+        }
+    }
+
+    &--bin {
+        color: $black;
+
+        &:after {
+            content: 'delete';
+            color: $red;
+            display: none;
+            font-size: .8vmax;
+            padding-top: 12px;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: transparent;
+            color: initial;
+
+            &:after {
+                display: inline;
+            }
+        }
+    }
+
+
+    &--refresh {
+        &:hover {
+            background: transparent;
+            color: #E74C3C;
+        }
+    }
+    
+    &:active, &:focus, &:visited {
+    	outline: none;
+    }
+
+    &:hover {
+        color: $red;
+    }
+
+} // end button

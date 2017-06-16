@@ -1,0 +1,35 @@
+{
+  "name": "pixelcore2017",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.6.1",
+    "node-sass-chokidar": "0.0.2",
+    "npm-run-all": "^4.0.2",
+    "particlesjs": "^2.0.2",
+    "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "react-transition-group": "^1.1.1",
+    "redux": "^3.6.0"
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "build-dev-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
+    "watch-css": "npm run build-dev-css node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

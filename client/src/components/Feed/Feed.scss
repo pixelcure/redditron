@@ -1,0 +1,24 @@
+  //////////////////////////////////////
+ // FEED //////////////////////////////
+//////////////////////////////////////
+
+
+
+.feed {
+	list-style: none;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    
+    &__item {
+    	background: #FFF;
+		border: 1px solid #CCC;
+    	margin-bottom: 3%;
+        overflow: hidden;
+    	padding: 0 3% 3% 3%;
+    	position: relative;
+    	&:last-child { margin-bottom: 0; }
+    }
+
+} // end feed

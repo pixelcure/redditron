@@ -1,0 +1,32 @@
+  ////////////////////////////////
+ // HELPERS /////////////////////
+////////////////////////////////
+
+
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+// Clear children elements that are floating with hiding overflow on parent div
+.overflow-hidden { 
+  overflow: hidden; 
+}
+
+// Float elements left
+.left {
+  float: left;
+}
+
+// Float elements right
+.right {
+  float: right;
+}
+
+
+// No Margin Right
+.no-margin-right {
+  margin-right: 0;
+}
