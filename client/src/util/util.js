@@ -144,3 +144,5 @@ export const randomBoards = [
 	'HybridAnimals'
 
 ];
+
+export const randomNsfwBoards = [];
